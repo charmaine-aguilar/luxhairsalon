@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --black: rgb(35, 35, 35);
+    --red: rgb(193, 32, 32);
+    --red-highlight: rgba(193, 32, 32, 0.8);
+    --playfair-display: 'Playfair Display'
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+    font-family: 'Roboto';
+    color: white;
+}
+
+/* ########################################################################## */
+
+/* HEADER AND NAVIGATION */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: var(--black);
+    padding: 0 48px;
+}
+
+.company-brand{
+    text-decoration: none;
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 10px;
+    background-color: var(--red);
+    padding: 4px;
+    transition: 0.5s;
+}
+
+.company-brand:hover{
+    background-color: var(--red-highlight);
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.main-navigation i {
+    font-size: 3rem;
+    color: white;
+}
+
+.navigation-links a {
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    font-size: 2.4rem;
+    padding-bottom: 4px;
+    margin-left: 48px;
+    display: inline-block;
+}
+
+.navigation-links a:after {
+    display: block;
+    border-bottom: 4px solid var(--red);
+    content: '';
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.navigation-links a:hover:after {
+    transform: scaleX(1);
+}
+
+.navigation-links a::after {
+    transform-origin: 0% 50%;
+}
+
+    /* BREAKPOINTS */
+    @media only screen and (max-width: 600px) {
+        .main-header {
+            padding: 0 24px;
+        }
+
+        .company-brand {
+            font-size: 3.5rem;
+        }
+
+        .navigation-links {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        .main-header {
+            padding: 0 24px;
+        }
+
+        .navigation-links {
+            display: none;
+        }
+    } 
+
+    @media only screen and (min-width: 768px) {
+        .main-header {
+            padding: 0 24px;
+        }
+
+        .navigation-links {
+            display: none;
+        }
+    } 
+
+/* ########################################################################## */
+
+/* HERO SECTION */
+.hero-section {
+    /* height: 720px */
+    height: calc(60vh - 80px);
+    width: 100%;
+    background-image: url('https://wallpapercave.com/wp/wp10275096.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-container {
+    max-width: 560px;
+    background-color: var(--black);
+    color: white;
+    padding: 48px;
+}
+
+.text-container h1 {
+    font-size: 5rem;
+}
+
+.text-container p {
+    font-size: 1.8rem;
+    margin: 4px 0 48px 0;
+}
+
+.text-container .book-schedule-button {
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: var(--red);
+    padding: 12px;
+    transition: 0.5s;
+}
+
+.text-container-mobile {
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px;
+    gap: 12px;
+}
+
+.text-container-mobile h1 {
+    padding-bottom: 12px;
+}
+
+.text-container-mobile h1 {
+    font-size: 2.5rem;
+}
+
+.text-container-mobile p {
+    font-size: 1.5rem;
+}
+
+.text-container-mobile a {
+    text-decoration: none;
+}
+
+.text-container-mobile .book-schedule-button {
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    text-decoration: none;
+    background-color: var(--red);
+    transition: 0.5s;
+    padding: 12px;
+    height: min-content;
+}
+
+.book-schedule-button:hover {
+    background-color: var(--red-highlight);
+}
+
+    /* BREAKPOINTS */
+    @media only screen and (max-width: 600px) {
+        .hero-section{
+            height: 400px;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-container {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        .hero-section{
+            height: 400px;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .text-container {
+            display: none;
+        }
+    } 
+
+    @media only screen and (min-width: 768px) {
+        .text-container {
+            display: none;
+        }
+    } 
+
+/* ############################################################## */
+
+/* SECTION SEPARATOR */
+.section-separator {
+    width: 100%;
+    background-color: var(--black);
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    padding: 200px 0 24px 0;
+}
+
+/* PORTFOLIO */
+.portfolio-section {
+    width: 100%;
+    background-color: var(--black);
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    /* max-width: 1366px; */
+}
+
+.portfolio-picture img{
+    max-height: 640px;
+    max-width: 100%
+}
+
+    /* BREAKPOINTS */
+    @media only screen and (max-width: 600px) {
+        .portfolio-section {
+            display: flex;
+            justify-content: center;
+        }
+
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+        }
+
+        .portfolio-picture {
+            width: 50%;
+        }
+
+        .portfolio-picture img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+/* SERVICES */
+.services-section {
+    width: 100%;
+    background-color: var(--black);
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 24px;
+}
+
+.service-type {
+    display: flex;
+    width: 1200px;
+    height: 480px;
+    font-size: 3rem;
+    background-color: transparent;
+    color: white;
+    /* border: 2px solid green; */
+}
+
+.service-image, .service-text {
+    height: 100%;
+    width: auto;
+}
+
+.service-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 5px solid var(--red);
+}
+
+.right-side {
+    padding-left: 24px;
+    border-left: transparent;
+}
+
+.left-side {
+    padding-left: 24px;
+    border-right: transparent;
+}
+
+.service-text h2 {
+    font-size: 3.5rem;
+}
+
+.service-text p {
+    font-size: 2.2rem;
+    max-width: 90%;
+}
+
+.service-one {
+    background-image: url('https://i0.wp.com/www.hadviser.com/wp-content/uploads/2020/02/6-textured-dark-hairstyle-CLR74c8swZM.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.service-two {
+    background-image: url('https://kao-h.assetsadobe3.com/is/image/content/dam/sites/kaousa/www-johnfrieda-com/master/blog/hair-color/balayage.jpeg?fmt=jpeg&qlt=85&wid=1680');
+    background-size: cover;
+    background-position: center center;
+}
+
+.service-three {
+    background-image: url('https://images.prismic.io/blowltd/2f0b9dbd-bd9a-4b74-9a71-e50cca0f8d5b_Blog+images+%283%29.png?auto=compress,format');
+    background-size: cover;
+    background-position: center center;
+}
+
+
+    /* BREAKPOINTS */
+    @media only screen and (max-width: 600px) {
+        .services-container {
+            width: 90%;
+            margin: 0 auto;
+            gap: 48px;
+        }
+
+        .service-type {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .services-image {
+            height: 500px;
+        }
+
+        .service-text {
+            height: auto;
+            width: 100%;
+            padding: 24px;
+            border: 5px solid var(--red);
+            border-top: none;
+        }
+
+        .service-text h2 {
+            font-size: 2.5rem;
+        }
+
+        .service-text p {
+            font-size: 2rem;
+        }
+
+        .on-desktop {
+            display: none;
+        }
+    }
+
+
+/* TEAM SECTION */
+.team-section {
+    background-color: var(--black);
+    height: auto;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.team-container {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.team-member {
+    height: 100%;
+    width: auto;
+}
+
+.member-picture {
+    height: 500px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.member-one {
+    background-image: url('https://lirp.cdn-website.com/c9592dff/dms3rep/multi/opt/IMG_1645_Facetune_01-12-2021-13-59-36+2-640w.jpg');
+}
+
+.member-two{
+    background-image: url('http://hairdesignsinc.net/wp-content/uploads/2020/02/IMG_2330.jpg');
+}
+
+.member-three{
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5d9003c00b53c8180cf4f288/1583792301984-YCQ2XUHRN1BP9BKN67VP/Kaitlin.jpeg');
+}
+
+.member-description {
+    height: 140px;
+    color: white;
+    font-size: 3rem;
+    margin: 24px 0;
+    padding: 16px;
+    border-left: 5px solid var(--red);
+}
+
+.member-name {
+    font-weight: bold;
+    font-size: 3.5rem;
+    padding-bottom: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+    .team-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .team-container {
+        width: 90%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .team-member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-picture {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+    }
+
+    .member-description {
+        max-width: 300px;
+        height: auto;
+    }
+
+    .member-description p {
+        font-size: 2rem;
+    }
+}
+
+
+/* CONTACT US SEPARATOR */
+.contact-separator {
+    background-color: rgb(252, 252, 252);
+    color: var(--black);
+    padding-top: 100px;
+}
+
+/* CONTACT SECTION */
+.contact-us {
+    height: 640px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.contact-container {
+    display: flex;
+    height: 100%;
+    width: 1200px;
+    border-top: 3px solid var(--black);
+    border-bottom: 3px solid var(--black);
+    margin: 0 24px;
+}
+
+.form-container {
+    /* width: 50%; */
+    min-width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-form {
+    width: 100%;
+    color: var(--black);
+}
+
+.contact-form label {
+    font-size: 2.4rem;
+}
+
+.contact-form input {
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    margin-bottom: 24px;
+    font-size: 2rem;
+}
+
+.contact-form input:focus {
+    outline: none;
+}
+
+.submit-button {
+    padding: 12px;
+    margin-top: 24px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 100%; 
+    color: white;
+    border: none;
+    background-color: var(--red-highlight);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: var(--red);
+}
+
+.contact-us-message {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 24px;
+    margin: 48px 0 48px 48px;
+    background-color: var(--black);
+}
+
+.contact-us-message {
+    color: white;
+}
+
+.contact-us-message h3 {
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+.contact-caption {
+    padding-top: 12px;
+    font-size: 1.8rem;
+}
+
+/* FOOTER */
+.footer {
+    height: fit-content;
+    width: 100%;
+    background-color: var(--black);
+    padding-bottom: 50px;
+}
+
+.footer-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-contacts {
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.footer-contacts p {
+    font-size: 1.6rem;
+}
+
+.phone {
+    padding: 16px 0;
+}
+
+.about-company {
+    width: 500px;
+    font-size: 2.4rem;
+    color: white;
+}
+
+.about-company h3 {
+    font-size: 1.6rem;
+}
+
+.about-company p {
+    max-width: 400px;
+    padding: 24px 0;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-media-links a{
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.social-media-links img {
+    height: 35px;
+    width: 35px;
+}
+
+.copyright {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
