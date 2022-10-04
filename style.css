@@ -535,6 +535,7 @@
 
 .contact-form label {
     font-size: 2.4rem;
+    color: var(--black);
 }
 
 .contact-form input {
@@ -591,6 +592,43 @@
 .contact-caption {
     padding-top: 12px;
     font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-us {
+        height: auto;
+        width: 100%;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: 90%;
+        padding: 12px 0;
+    }
+
+    .contact-us-message {
+        width: 100%;
+        margin: 12px 0 24px 0;
+        padding: 12px;
+    }
+
+    .contact-us-message h3 {
+        font-size: 2.4rem;
+    }
+
+    .on-desktop {
+        display: none;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .contact-form label {
+        font-size: 2rem;
+    }
 }
 
 /* FOOTER */
@@ -662,4 +700,17 @@
     font-size: 2rem;
     color: white;
     text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        
+    }
+    .footer-container {
+        width: 90%;
+    }
+
+    .about-company h3, .about-company p {
+        display: none;
+    }
 }
