@@ -1,5 +1,8 @@
-# LUX Hair Salon
+## Description
 A Landing page for a hair salon called LUX
 
-# Link preview
-View the website [here]!(https://luxhairsalon.netlify.app/)
+## Live preview
+View the website [here](https://luxhairsalon.netlify.app/)!
+
+## To-do's:
+- [ ] Fix website responsiveness
