@@ -6,7 +6,7 @@ A landing page for a make-believe hair salon called LUX based in Jersey City, Ne
 
 ---
 
-## Development Process
+## Development Process (Work in Progress)
 **Technologies used**
 <br><img src='https://img.shields.io/badge/-HTML5-orange?style=flat-square'/> <img src='https://img.shields.io/badge/-CSS3-blue?style=flat-square'/>
 
