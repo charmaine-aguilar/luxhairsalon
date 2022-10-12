@@ -704,13 +704,42 @@
 
 @media only screen and (max-width: 600px) {
     .footer {
-        
+        width: 100%;
     }
+
     .footer-container {
-        width: 90%;
+        /* border: 1px red solid; */
+        align-items: center;
+        width: 100%;
+        gap: 4.8rem;
+    }
+
+    .footer-contacts {
+        width: auto;
+        /* border: 1px solid red; */
+    }
+    
+    .about-company {
+        width: auto;
+        /* border: 1px solid red; */
     }
 
     .about-company h3, .about-company p {
         display: none;
+    }
+
+    .social-media-links {
+        flex-direction: column;
+    }
+
+    .copyright {
+        font-size: 1.6rem;
+    }
+}
+
+/* SEPARATORS */
+@media only screen and (max-width: 600px) {
+    .section-separator {
+        padding: 4.8rem 0 2.4rem 0;
     }
 }
