@@ -394,7 +394,7 @@
         }
 
         .service-text p {
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         .on-desktop {
@@ -548,6 +548,7 @@
     border-bottom: 1px solid var(--black);
     margin-bottom: 24px;
     font-size: 2rem;
+    color: black;
 }
 
 .contact-form input:focus {
