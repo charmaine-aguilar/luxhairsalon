@@ -2,7 +2,7 @@
 A landing page for a make-believe hair salon called LUX based in Jersey City, New Jersey. This website provides a quick access to book salon appointments and provide contact information for customers looking to inquire.
 
 **Live preview**
-NOTE: Currently broken on desktop view. Only works well on mobile view. Still a WIP
+<br>NOTE: Currently broken on desktop view. Only works well on mobile view. Still a WIP
 <br>View the website here: https://luxhairsalon.netlify.app/
 
 ---
